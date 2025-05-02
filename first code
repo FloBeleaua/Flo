@@ -1,0 +1,14 @@
+secret_number = 9
+i = 0
+j = 3
+while i < 3:
+    guess = int(input("Guess: "))
+    i += 1
+    if guess == secret_number:
+        print("You won")
+        break
+    
+else:
+    print("You lost")    
+
+guess game
