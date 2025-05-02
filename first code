@@ -12,3 +12,47 @@ else:
     print("You lost")    
 
 guess game
+
+numbers = [5, 2, 1, 5, 7, 4]
+uniques = []
+for number in numbers:
+    if number not in uniques:
+        uniques.append(number)
+    
+print(uniques)
+
+removing the duplicates from a list
+
+numbers = (1, 2, 3) - tuples cant be modifed
+
+ustomer = {
+    "name": "John Smith",
+    "age": 30,
+    "is_verified": True
+}
+customer["birthdate"] = "Jan 1"
+print(customer.get("birthdate"))
+
+Dicitonaries- u cant add 2 of the same but u can update them after and it will be printed the updated veriosn of the dicitionaries
+
+phone = input("Phone: ")
+
+digits_maping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+    "0": "Zero"
+}
+output = ""
+for ch in phone:
+    output += digits_maping.get(ch, "!") + ""
+
+print(output)
+
+translate from number to string using dictionaries and calling them.
