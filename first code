@@ -56,3 +56,169 @@ for ch in phone:
 print(output)
 
 translate from number to string using dictionaries and calling them.
+
+
+def greet_user(name, last_name):
+    print(f"Hi {name} {last_name}")
+    print("Welcome aboard")
+
+
+print("Start")
+greet_user(last_name="John", name="Smith")
+print("Finish")
+
+introduction in functions
+
+
+try:
+    age = int(input("Age: "))
+    income = 20000
+    risk = income / age
+    print(age)
+except ZeroDivisionError:
+    print("Age can not be 0")
+except ValueError:
+    print("Invalid Value")
+
+exception for values and for 0 values do not let the code crash(enjoyed this one)
+
+class Point:
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+
+point1 = Point()
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point1.draw()
+
+point2 = Point()
+point2.x = 11
+print(point2.x)
+
+first look at classes u can acces functions from the class u made pretty cool
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+John = Person("John Smith")
+John.talk()
+
+bob = Person("Bob Smith")
+bob.talk()
+
+constructors are pretty compplicated ngl but i think i got it
+
+
+class Mammal:
+    def walk(self):
+        print("Walk")
+
+class Dog(Mammal):
+    def bark(self):
+        print("Bark")
+    
+
+class Cat(Mammal):
+    def be_annoying(self):
+        print("annoying")
+
+
+dog1 = Dog()
+dog1.walk()
+dog1.bark()
+
+cat1 = Cat()
+cat1.be_annoying()
+
+inheritance is pretty easy and useful
+
+import converters                                                 
+from converters import kg_to_lbs
+
+print(kg_to_lbs(100))
+
+print(converters.kg_to_lbs(70))
+
+ def lbs_to_kg(weight):
+    return weight * 0.45
+
+def kg_to_lbs(weight):
+    return weight / 0.45
+
+now modules are rlly good only use import "name of the file"
+or import from "name of the filme" and only the method u want
+
+
+another module code 
+def find_max(numbers):
+    max = numbers[0]
+    for number in numbers:
+        if number > max:
+            max = number
+        return max
+
+import utils
+
+
+numbers = [10, 3, 6, 2]
+max = utils.find_max(numbers)
+print(max)
+
+
+
+
+import random
+
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
+        return first, second
+        
+
+dice = Dice()
+dice.roll()
+print(dice.roll())
+ roll a dice pretty fun tho
+
+import openpyxl as xl
+from openpyxl.chart import BarChart, Reference
+
+
+
+wb = xl.load_workbook("transactions.xlsx")
+sheet = wb["Sheet1"]
+cell = sheet["a1"]
+cell = sheet.cell(1, 1)
+
+for row in range(2, sheet.max_row + 1):
+    sheet.cell(row, 3)
+    corrected_price = cell.value * 2
+    corrected_price_cell = sheet.cell(row, 4)
+    corrected_price_cell.value = corrected_price
+
+
+values = Reference(sheet,
+                   min_row=2,
+                   max_row=sheet.max_row,
+                   min_col=4,
+                   max_col=4)
+
+
+chart = BarChart()
+chart.add_data(values)
+sheet.add_chart(chart, "e2")
+
+wb.save("transactions2.xlsx")
+ first automating code in excel that also creats a chart of the values u inserted
