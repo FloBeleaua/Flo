@@ -242,3 +242,67 @@ score = accuracy_score(y_test, predictions)
 print(score)
 
 prediciton and accuracy code ML using python anaconda and jupyter i think
+
+
+
+
+# name = input("Enter your full name: ")
+
+phone_number = input("Enter your phone number: ")
+# result = len(name)
+# result = name.find("o")
+# result = name.rfind("Q")
+# name = name.capitalize()
+# name = name.upper()
+# name = name.lower()
+# result = name.isdigit()
+# result = name.isalpha()
+# result = phone_number.count("-")
+phone_number = phone_number.replace("-", "")
+
+
+print(phone_number)
+ just for my information
+
+
+
+username = input("Enter a username: ")
+
+
+
+if len(username) > 12:
+    print("Your username cant be more than 12 chars")
+elif not username.find(" ") == -1:
+    print("Your username cant containe spaces")
+elif not username.isalpha():
+    print("Your username cant contain numbers")
+else:
+    print(f"Welcome {username}")
+
+username with conditions
+
+credit_number = "1234-5678-9012-3456"
+
+credit_number = credit_number[::-1]
+print(credit_number)
+reverse the numbers- i didnt know this
+
+price1 = 3.14159
+price2 = -987.65
+price3 = 12.34
+
+print(f"Price 1 is ${price1:<.2f}")
+print(f"Price 2 is ${price2:^,.3f}")
+print(f"Price 3 is ${price3:>,.10f}")
+ format specifiers
+
+name = input("Enter your full name(press Q to quit the loop): ")
+
+while len(name) > 10 or len(name) < 3:
+    print("Your name is not valid try again!")
+    name = input("Enter your full name(press Q to quit the loop): ")
+
+print("Valide username")
+
+
+while loops
