@@ -324,4 +324,194 @@ print("Time is up")
 
 countdown program pretty fun
 
+num_pad = ((1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#"))
+
+for row in num_pad:
+    for num in row:
+        print(num, end=" ")
+    print() 
+a num pad :D
+
+questions = ("How many elemnts are in a periodic table?: ",
+            "Which animal lays the largest eggs?: ",
+            "What is the most abudent gas in earth's atmoshphere?: ",
+            "How many bones are in the human body?: ",
+            "Which planet in the solar system in the hottest?: ")
+
+options = (("A. 116", "B. 117", "C. 118", "D. 119"),
+           ("A. Whale", "B. Crocodile", "C. Elephant", "D. Ostrich"),
+           ("A. Nitrogen", "B. Oxygen", "C. Carbon-Dioxide", "D. Hydrogen"),
+           ("A. 206", "B. 207", "C. 208", "D. 209"),
+           ("A. Mercury", "B. Venus", "C. Earth", "D. Mars"))
+
+answers = ("C", "D", "A", "A", "B")
+guesses = []
+score = 0
+question_num = 0
+
+for question in questions:
+    print("--------------------------")
+    print(question)
+    for option in options[question_num]:
+        print(option)
+
+    
+    guess = input("Enter (A, B, C, D)").upper()
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score += 1
+        print("Correct!")
+    else:
+        print("Incorrect!")
+        print(f"{answers[question_num]} is the correct answer")
+    question_num += 1    
+
+print("--------------------")
+print("      Restults      ")
+print("--------------------")
+
+print("answears: ", end="")
+
+for answear in answers:
+    print(answear, end=" ")
+print()
+
+score =int(score / len(questions) * 100)
+print(f"Your score is: {score}%")
+
+QUIZZ GAME IMMA COME BACK TO FULLY UNDERSTAND IT
+
+
+capitals = {"USA": "Washington D.C.",
+            "India": "New Delhi",
+            "China": "Beijning",
+            "Russia": "Moscow"}
+
+# if capitals.get("India"):
+# print("That capital exists")
+# else:
+# print("That capital does not exists")
+
+# keys = capitals.keys()
+
+# for key in capitals.keys():
+#   print(key)
+
+#values = capitals.values()
+
+#for value in values:
+ #   print(value)
+
+
+items = capitals.items()
+
+for key, value in capitals.items():
+    print(f"{key}: {value}")
+dicitonaries pretty cool :D
+
+
+import random
+
+lowest_num = 1
+highest_num = 100
+answer = random.randint(lowest_num, highest_num)
+is_running = True
+guesses = 0
+
+print("Welcome to the GUESS THE NUBMER")
+print(f"Please try and guess a number between {lowest_num} and {highest_num}")
+
+
+while is_running:
+    guess = input("Enter your guess: ")
+
+    if guess.isdigit():
+        guess = int(guess)
+        guesses += 1
+         
+
+        if guess < lowest_num or guess > highest_num:
+            print(f"Please insert a guess from {lowest_num} to {highest_num}")
+        elif guess < answer:
+            print("Your guess is lower than the answer")
+        elif guess > answer:
+            print("Your guess is higher than the answer")
+        elif guess == answer:
+            print(f"Congrats, the answer is {answer}")
+            print(f"You guessed {guesses}")
+            is_running = False
+
+    
+    else:
+        print("Your guess is not valid")
+      
+
+guessing game made by me
+
+
+import random
+
+options = ("rock", "paper", "scissors")
+running = True
+
+
+while running:
+    player = None
+    computer = random.choice(options)
+
+    while player not in options:
+        player = input("Enter a choice (rock, paper, sicssors): ")
+
+
+    print(f"Player: {player}")
+    print(f"Computer: {computer}")
+
+
+    if player == computer:
+        print("It's a tie!")
+    elif player == "rock" and computer == "scissors":
+        print("You win!")
+    elif player == "paper" and computer == "rock":
+        print("You win!")
+    elif player == "scissors" and computer == "paper":
+        print("You win")
+    else:
+        print("You lose!")
+
+    play_again = input("Play again? (y/n): ").lower()
+    if not play_again == "y":
+        running = False
+
+print("Thanks for playing!")
+
+
+rock paper scissors game :D
+
+def create_name(first, last):
+    first = first.capitalize()
+    last = last.capitalize()
+    return first + " " + last
+
+
+full_name = create_name("bro", "code")
+print(full_name)
+
+def shipping_label(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+    if "apt" in kwargs:
+        print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+    else:
+        print(f"{kwargs.get('street')}")
+    print(f"{kwargs.get('city')} {kwargs.get('state')} {kwargs.get('zip')}")
+
+
+shipping_label("Dr.", "Spongebob", "Squarepants",
+               "III", street="123 Fake St.", apt="100", city="Detroit",
+               state="MI", zip="54321")
+i will get back to aribtratry arguments
 
